@@ -1,0 +1,464 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat;
+}
+
+html , body{
+    height: 100%;
+    width: 100%;
+    color: #fff;
+}
+
+.cursor{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #cdf75a;
+    position:fixed;
+    z-index: 99;
+}
+
+#blur{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: #d2f37e;
+    filter: blur(150px);
+    z-index: 8;
+    position: fixed;
+}
+
+#nav{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 50px;
+    gap: 60px;
+    /* background-color: red; */
+    position: fixed;
+    z-index: 90;
+   
+}
+
+#nav h4{
+    text-align: center;
+    font-weight: 500;
+    /* background-color: red; */
+    /* color: #fff; */
+}
+
+#nav img{
+    height: 80px;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -2;
+    /* background-color: rgba(red, green, blue, 075alpha); */
+}
+
+ /* main div ko height or width nhi dia to facilitate locomotive js */
+#main{
+    position: relative;
+    background-color: rgba(0,0,0, .3);
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+#page1 h1{
+    font-size: 160px;
+    font-weight: 900;
+    position: relative;
+    margin-top: 100px;
+}
+
+#page1 h1::before{
+    content: "Eat. Drink. Play.";
+    position: absolute;
+    color: black;
+    top: -5px;
+    left: -5px;
+    -webkit-text-stroke: 3px #cdf75a;
+    z-index: -1;
+}
+
+#page1 h2{
+    font-size: 50px;
+    font-weight:800;
+    margin-top: 50px;
+}
+
+#page1 p{
+    font-size: 20px;
+    font-weight: 500;
+    width: 50%;
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 9;
+}
+
+#scroller{
+    /* background-color: red; */
+    height: 20vh;
+    width: 100%;
+    white-space: nowrap;
+    display: flex;
+    z-index: 9;
+    overflow: hidden;
+    position: relative;
+    /* overflow-x: auto;
+    overflow-y: hidden;
+    */
+}
+
+#scroller-in h3{
+    display: inline-block;
+    margin-right: 80px;
+    font-size: 120px;
+    font-weight: 900;
+    font-family: gilroy;
+    color: black;
+    -webkit-text-stroke: 2px #cdf75a;
+    transition: all linear .5;
+}
+
+#scroller-in h3:hover{
+    color: #cdf75a;
+}
+
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+
+}
+
+#about-us{
+    height: 30vh;
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    padding: 50px ;
+    position: relative;
+}
+
+#about-us img{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    z-index: 9;
+}
+
+#about-us h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#text{
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    line-height: 20px;
+}
+
+#card-container{
+    /* background-color: red; */
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    /* z-index: 9; */
+}
+
+.card{
+    height: 300px;
+    width: 24%;
+    border-radius: 15px;
+    background-color: blue;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#card1{
+    background: url(home-toptracer.webp);
+}
+
+#card2{
+    background: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+#card3{
+    background-color: aqua;
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #cdf75a;
+    padding: 50px;
+    color: black;
+    opacity: 0;
+    transition: all ease .3s;
+}
+
+.overlay h4{
+    font-size: 35px;
+    white-space: nowrap;
+    margin-bottom: 30px;
+}
+.overlay p{
+    font-size: 17px;
+}
+
+.card:hover .overlay {
+    opacity: 1; /* Show overlay on card hover */
+}
+
+#green-box{
+    /* background-color: red; */
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg , #A3D421,#1BA238);
+}
+
+#green-box h3{
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+}
+
+#green-box img{
+    object-fit: cover;
+    /* background-color: red; */
+    height: 100%;
+    width: 15%;
+}
+
+#page3{
+    height: 50vh;
+    width: 100%;
+    /* background-color: red; */
+}
+
+#quotes{
+    height: 30vh;
+    /* padding: 30px; */
+    margin: 0 300px;
+    /* background-color: rgb(17, 16, 16); */
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#page3 p{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    padding: 30px;
+}
+
+#page3 img{
+    position: absolute;
+    height: 30px;
+}
+
+#page3 #colon1{
+    top: -50px;
+    left: 0;
+}
+
+#quotes #colon2{
+    bottom: -50px;
+    right: 0;
+}
+
+.cursor{
+    transition: none;
+}
+
+.scale-up{
+    transform: scale(3);
+    border: 0.5px #fff solid;
+    background-color: transparent;
+    transition: transform 0.3s;
+}
+
+.scale-down{
+    transform: scale(1);
+    border: 0px solid #cdf75a;
+    background-color: #cdf75a;
+    transition:transform 0.3s ease;
+}
+
+#page4{
+    height: 30vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+}
+
+#page4 h1{
+    position: absolute;
+    font-size: 80px;
+    font-weight: 1900;
+    top: -9%;
+    color: black;
+    -webkit-text-stroke: .5px white;
+    font-family: gilroy;
+}
+
+.elem{
+    height: 70%;
+    width: 20%;
+    overflow: hidden;
+    gap: 70px;
+    border-radius: 20px;
+    position: relative;
+    /* background-color: red; */
+}
+
+.elem h2{
+    height: 100%;
+    width: 100%;
+    background-color: #cdf75a;
+    color: black;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    position: absolute;
+    z-index: 9;
+    transition: all ease 0.5s;
+}
+
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease .5s;
+    scale: 1.1;
+}
+
+.elem:hover h2{
+    color: white;
+    background-color: transparent;
+}
+
+.elem:hover img{
+    scale: 1;
+}
+
+#footer{
+    padding-top: 50px;
+    height: 50vh;
+    width: 100%;
+    /* background-color: #cdf75a; */
+    background: linear-gradient(45deg,#cdea7d, rgb(4, 97, 4));
+    position: relative;
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+    /* padding: 20px; */
+    overflow: hidden;
+    color: black;
+}
+
+#footer h2{
+    font-size: 40px;
+}
+
+#footer h4{
+    font-size: 20px;
+}
+
+.f11{
+    display: flex;
+    justify-content: space-between;
+}
+
+#f1{
+    width: 20%;
+    position: relative;
+    /* background-color: red; */
+}
+
+#img1{
+    
+    height: 100%; 
+    width: 80%;
+    margin-top: 80px;
+    scale: 1.5;
+    object-fit: cover; 
+}
+
+#img2{
+    height: 80px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+}
+
+#para{
+    display: block;
+    bottom: 0;
+    text-align: center;
+    /* background-color: red; */
+    z-index: 100;
+    color: black;
+    font-weight: 500;
+}
+
+#lastSpan{
+    margin-left: 200px;
+    color: black;
+}
+
+*::selection{
+    color: #A3D421;
+    background-color:white ;
+}
